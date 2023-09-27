@@ -12,6 +12,27 @@ console.log('-------------------------------------------------------------------
 console.log('Задание 1');
 console.log('--------------------------------------------------------------------');
 
+class Book {
+  constructor(title = 'no name', author = 'no name', pages = 0) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
+
+  displayInfo() {
+    console.log(`Информация о книге: 
+    Название: ${this.title} 
+    Автор: ${this.author} 
+    Кол-во страниц: ${this.pages}`);
+  }
+}
+
+const book = new Book('Дети капитана Гранта', 'Жюля Верн', 576);
+const book1 = new Book();
+
+book.displayInfo();
+book1.displayInfo();
+
 // --------------------------------------------------------------------
 // Задание 2 "Управление списком студентов"
 
@@ -27,5 +48,26 @@ console.log('-------------------------------------------------------------------
 console.log('--------------------------------------------------------------------');
 console.log('Задание 2');
 console.log('--------------------------------------------------------------------');
+
+class Student {
+  constructor(name = 'no name', age = 0, grade = 'no group') {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+  }
+
+  displayInfo() {
+    console.log(`Информация о студенте: 
+    Имя: ${this.name} 
+    Возраст: ${this.age} 
+    Номер ученой группы: ${this.grade}`);
+  }
+}
+
+const student = new Student('Dima', 28, '223-322');
+const student1 = new Student();
+
+student.displayInfo();
+student1.displayInfo();
 
 // --------------------------------------------------------------------
